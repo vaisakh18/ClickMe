@@ -1,5 +1,6 @@
 let but = document.querySelector("button")
 let moved = false
+let predict = document.querySelector(".predict")
 
 but.addEventListener("mouseover", function() {
   if(!moved) {
@@ -9,5 +10,9 @@ but.addEventListener("mouseover", function() {
     but.style.marginLeft = "0px"
     moved = false
   }
-  
 })
+
+setTimeout(function(){
+  but.style.display = "none"
+  predict.innerText = "Sorry......"
+},10000)
